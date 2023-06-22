@@ -26,6 +26,8 @@ async function toggleTodo(id: string, complete: boolean) {
 }
 
 
+
+
 export default async function IndexPage() {
   //const todos = await getTodos();
   const todos = await prisma.todo.findMany();
