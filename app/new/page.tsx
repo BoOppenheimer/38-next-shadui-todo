@@ -2,7 +2,6 @@
 import { prisma } from "@/lib/db"
 import { redirect } from "next/navigation"
 import Link from "next/link"
-import  AddButton  from "@/app/new/AddButton"
 
 import { experimental_useFormStatus as useFormStatus } from "react-dom";
 import { revalidatePath } from "next/cache";
