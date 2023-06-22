@@ -9,6 +9,7 @@
 - Icons from [Lucide](https://lucide.dev)
 - Dark mode 
 - Server side rendering
+- using react pending form! interesting stuff.
 
 ## stuff to work on in order of priority
 - [ ] pending status /loader on the is complete
