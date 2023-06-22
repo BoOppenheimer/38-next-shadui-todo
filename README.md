@@ -7,3 +7,6 @@
 - Icons from [Lucide](https://lucide.dev)
 - Dark mode 
 - Server side rendering
+
+## stuff to work on
+- [ ] pending status /loader on the is complete
