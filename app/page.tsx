@@ -1,5 +1,3 @@
-
-import Link from "next/link"
 import {prisma} from "@/lib/db"
 import {
   Table,
@@ -14,23 +12,6 @@ import { siteConfig } from "@/config/site"
 import {TodoItem} from '../components/TodoItem'
 
 
-// const todos = [
-//   {
-//     id: "1",
-//     title: "task 1",
-//     completed: false,
-//     createdAt: 1687168190522,
-//     updatedAt: 1687168190523
-//   },
-//   {
-//     id: "2",
-//     title: "task 2",
-//     completed: false,
-//     createdAt: 1687168190522,
-//     updatedAt: 1687168190523
-//   }
- 
-// ];
 
 function getTodos () {
   //return prisma.todo.findMany()
@@ -43,7 +24,6 @@ async function toggleTodo(id: string, complete: boolean) {
  await prisma.todo.update({where: {id}, data: {complete}})
  
 }
-
 
 
 export default async function IndexPage() {
@@ -67,33 +47,6 @@ export default async function IndexPage() {
       
       </ul>
 
-       {/* 
-     
-     <Table>
-      <TableCaption>A list of your recent invoices.</TableCaption>
-      <TableHeader>
-        <TableRow>
-          <TableHead className="w-[100px]">Completed</TableHead>
-          <TableHead>Todo</TableHead>
-          <TableHead>Days Since</TableHead>
-          <TableHead className="text-right">Delete</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-      {todos.map(todo =>(
-        //<li key={todo.id}>{todo.title} </li> 
-        <TableRow>
-              
-         </TableRow>
-        // <>
-            
-        //     <TodoItem key={todo.id} id={todo.id} title={todo.title} complete={todo.complete} createdAt toggleTodo={toggleTodo}/> 
-        // </>
-       
-))}
-       
-      </TableBody>
-      </Table> */}
       </div>
     </section>
   )
