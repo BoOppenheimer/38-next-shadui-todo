@@ -10,5 +10,9 @@
 - Dark mode 
 - Server side rendering
 
-## stuff to work on
+## stuff to work on in order of priority
 - [ ] pending status /loader on the is complete
+- [ ] delete
+- [ ] table
+- [ ] sorting
+
