@@ -1,16 +1,13 @@
 import {prisma} from "@/lib/db"
 import {
   Table,
-  TableCaption,
   TableBody,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import Loading from '@/components/loading'
 import { revalidatePath } from "next/cache";
 import {TodoItem} from '../components/TodoItem'
-import { Suspense } from "react";
 
 
 
