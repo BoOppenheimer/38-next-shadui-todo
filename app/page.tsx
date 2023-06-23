@@ -30,7 +30,7 @@ async function toggleTodo(id: string, complete: boolean) {
  
 }
 
-async function deleteTodo(id: string):FormData {
+async function deleteTodo(id: string) {
   "use server"
   let isPending = "Pending chuck";
   console.log("this is pending?")

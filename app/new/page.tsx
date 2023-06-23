@@ -5,7 +5,6 @@ import Link from "next/link"
 
 import AddButton from './AddButton';
 import { revalidatePath } from "next/cache";
-import { CloudCog } from "lucide-react";
 
 async function createTodo(data: FormData) {
   "use server"
