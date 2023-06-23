@@ -43,11 +43,11 @@ export function TodoItem({ id, title, complete, toggleTodo, deleteTodo }: TodoIt
               id={id} 
               defaultChecked={complete}
               onChange={e=> toggleTodo(id, e.target.checked)}
-              className="cursor-pointer peer"/ >
-              <label htmlFor="id" className="cursor-pointer peer-checked:line-through peer-checked:text-slate-500">will be x'd</label>
+              className="peer cursor-pointer"/ >
+              <label htmlFor="id" className="cursor-pointer peer-checked:text-slate-500 peer-checked:line-through">will be x'd</label>
           </TableCell>
 
-          <TableCell className="cursor-pointer peer-checked:line-through peer-checked:text-slate-500">
+          <TableCell className="cursor-pointer peer-checked:text-slate-500 peer-checked:line-through">
               {title}
           </TableCell>
 

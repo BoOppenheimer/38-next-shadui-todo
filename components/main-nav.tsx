@@ -18,7 +18,7 @@ export function MainNav({ items }: MainNavProps) {
         <span className="inline-block font-bold">Next v13.4 Todos!</span>
       </Link>
       {items?.length ? (
-        <nav className="flex gap-6 justify-end">
+        <nav className="flex justify-end gap-6">
           {items?.map(
             (item, index) =>
               item.href && (

@@ -8,7 +8,7 @@ export default function AddButton() {
     <button
       disabled={pending}
       type="submit"
-      className="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-slate-700 focus-within:bg-slate-700 outline-none disabled:text-slate-700"
+      className="rounded border border-slate-300 px-2 py-1 text-slate-300 outline-none focus-within:bg-slate-700 hover:bg-slate-700 disabled:text-slate-700"
     >
       Add Todo
     </button>
