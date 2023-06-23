@@ -7,9 +7,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-
-import { siteConfig } from "@/config/site"
+import Loading from '@/components/loading'
+import { revalidatePath } from "next/cache";
 import {TodoItem} from '../components/TodoItem'
+import { Suspense } from "react";
 
 
 
@@ -21,9 +22,29 @@ function getTodos () {
 
 async function toggleTodo(id: string, complete: boolean) {
  "use server"
+ let isPending = "Pending chuck";
+ console.log("this is pending?")
+ console.log(isPending)
+ revalidatePath("/")
  await prisma.todo.update({where: {id}, data: {complete}})
+ console.log("/// - this is resolved")
+ isPending = "finished Chuck"
+ console.log(isPending);
  
 }
+
+async function deleteTodo(id: string):FormData {
+  "use server"
+  let isPending = "Pending chuck";
+  console.log("this is pending?")
+  console.log(isPending)
+  revalidatePath("/")
+  await prisma.todo.delete({where: {id}})
+  console.log("/// - this is resolved")
+  isPending = "finished Chuck"
+  console.log(isPending);
+  
+ }
 
 
 
@@ -34,21 +55,36 @@ export default async function IndexPage() {
 
   return (
     <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-      <div className="flex max-w-[980px] flex-col items-start gap-2">
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
-          Next v13.4 Todos <br className="hidden sm:inline" />
-          built with Radix UI and Tailwind CSS.
-        </h1>
-      </div>
       <div className="flex gap-4"> 
-      <ul>
-      
-      {todos.map(todo => (
-          <TodoItem key={todo.id} {...todo} toggleTodo={toggleTodo} />
-        ))}
-      
-      </ul>
 
+      <Table>
+        <TableHeader>
+            <TableRow>
+                  <TableHead>
+                    Complete
+                  </TableHead>
+                  <TableHead>
+                    title
+                  </TableHead>
+                  <TableHead>
+                    days since
+                  </TableHead>
+                  <TableHead>
+                    delete
+                  </TableHead>
+            </TableRow>
+        </TableHeader>
+      
+        <TableBody>
+          {todos.map(todo => (
+          
+              <TodoItem key={todo.id} {...todo} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+          
+            ))}
+        </TableBody>
+
+      </Table>
+    
       </div>
     </section>
   )

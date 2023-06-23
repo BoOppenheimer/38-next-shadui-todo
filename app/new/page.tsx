@@ -5,6 +5,7 @@ import Link from "next/link"
 
 import AddButton from './AddButton';
 import { revalidatePath } from "next/cache";
+import { CloudCog } from "lucide-react";
 
 async function createTodo(data: FormData) {
   "use server"
@@ -13,7 +14,7 @@ async function createTodo(data: FormData) {
   if (typeof title !== "string" || title.length === 0) {
     throw new Error("Invalid Title")
   }
-
+  console.log("this is DATA: " + data);
   await prisma.todo.create({ data: { title, complete: false } })
   revalidatePath("/")
   redirect("/")
@@ -45,3 +46,4 @@ export default function Page() {
     </section>
   )
 }
+

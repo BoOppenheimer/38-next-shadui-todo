@@ -5,16 +5,11 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import {Button} from "./ui/button"
+import {Trash2} from "lucide-react" 
+import { experimental_useFormStatus as useFormStatus } from "react-dom"
 
 
-// type TodoItemProps = {
-//   id: string
-//   title: string
-//   complete: boolean
-//   createdAt: number
-//   updatedAt: number
-//   toggleTodo: (id: string, complete: boolean) => void
-// };
+
 
 const minute = 1000 * 60;
 const hour = minute * 60;
@@ -29,41 +24,46 @@ type TodoItemProps = {
   title: string
   complete: boolean
   toggleTodo: (id: string, complete: boolean) => void
+  deleteTodo: (id: string) => void
 }
 
-export function TodoItem({ id, title, complete, toggleTodo }: TodoItemProps) {
 
+
+export function TodoItem({ id, title, complete, toggleTodo, deleteTodo }: TodoItemProps) {
+ 
+    const { pending } = useFormStatus();
+  
 
   return (
+    <TableRow>
 
-    <li className="flex gap-1 items-center">
-    <input
-      id={id}
-      type="checkbox"
-      className="cursor-pointer peer"
-      defaultChecked={complete}
-      onChange={e => toggleTodo(id, e.target.checked)}
-    />
-    <label
-      htmlFor={id}
-      className="cursor-pointer peer-checked:line-through peer-checked:text-slate-500"
-    >
-      {title}
-    </label>
-  </li>
-    // <TableRow>
-    //       <TableCell className="font-medium ">
-    //       <input 
-    //       type="checkbox" 
-    //       id={id} 
-    //       defaultChecked={complete}
-    //       onChange={e=> toggleTodo(id, e.target.checked)}
-    //       className="cursor-pointer peer"/ >
-    //       <label htmlFor="id" className="cursor-pointer peer-checked:line-through peer-checked:text-slate-500">will be x'd</label>
-    //       </TableCell>
-    //       <TableCell>{title}</TableCell>
-    //       <TableCell></TableCell>
-    //       <TableCell className="text-right"><Button/></TableCell>
-    // </TableRow>
+          <TableCell className="font-medium ">
+              <input 
+              type="checkbox" 
+              id={id} 
+              defaultChecked={complete}
+              onChange={e=> toggleTodo(id, e.target.checked)}
+              className="cursor-pointer peer"/ >
+              <label htmlFor="id" className="cursor-pointer peer-checked:line-through peer-checked:text-slate-500">will be x'd</label>
+          </TableCell>
+
+          <TableCell className="cursor-pointer peer-checked:line-through peer-checked:text-slate-500">
+              {title}
+          </TableCell>
+
+          <TableCell>
+            date
+          </TableCell>
+
+          <TableCell className="text-right">
+              <Button variant="outline" onClick={()=> deleteTodo(id)} className="p-1"> <Trash2/></Button>
+              
+              
+                
+              
+         </TableCell>
+
+    </TableRow>
   )
 }
+

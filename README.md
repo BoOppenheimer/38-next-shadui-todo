@@ -1,19 +1,21 @@
 # Next.js Todos
 
 [vercel link](https://38-next-shadui-todo-lqrmcf2kf-booppenheimer.vercel.app/)
+
+[codesandbox](https://codesandbox.io/p/github/BoOppenheimer/38-next-shadui-todo/draft/laughing-sammet?file=%2F.env%3A1%2C1&layout=%257B%2522sidebarPanel%2522%253A%2522EXPLORER%2522%252C%2522rootPanelGroup%2522%253A%257B%2522direction%2522%253A%2522horizontal%2522%252C%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522id%2522%253A%2522ROOT_LAYOUT%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522direction%2522%253A%2522horizontal%2522%252C%2522id%2522%253A%2522EDITOR%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL%2522%252C%2522panelType%2522%253A%2522TABS%2522%252C%2522id%2522%253A%2522clj8lzong000b3b6o7946y2cz%2522%257D%255D%252C%2522sizes%2522%253A%255B100%255D%257D%252C%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522direction%2522%253A%2522horizontal%2522%252C%2522id%2522%253A%2522DEVTOOLS%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL%2522%252C%2522panelType%2522%253A%2522TABS%2522%252C%2522id%2522%253A%2522clj8lzong000d3b6oaajmbt3b%2522%257D%255D%252C%2522sizes%2522%253A%255B100%255D%257D%255D%252C%2522sizes%2522%253A%255B50%252C50%255D%257D%252C%2522tabbedPanels%2522%253A%257B%2522clj8lzong000b3b6o7946y2cz%2522%253A%257B%2522id%2522%253A%2522clj8lzong000b3b6o7946y2cz%2522%252C%2522activeTabId%2522%253A%2522clj8m6bxg00te3b6o2s5n0r73%2522%252C%2522tabs%2522%253A%255B%257B%2522id%2522%253A%2522clj8lzong000a3b6oz5povei5%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522type%2522%253A%2522FILE%2522%252C%2522filepath%2522%253A%2522%252FREADME.md%2522%252C%2522state%2522%253A%2522IDLE%2522%257D%252C%257B%2522type%2522%253A%2522FILE%2522%252C%2522filepath%2522%253A%2522%252F.env%2522%252C%2522id%2522%253A%2522clj8m6bxg00te3b6o2s5n0r73%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522state%2522%253A%2522IDLE%2522%257D%255D%257D%252C%2522clj8lzong000d3b6oaajmbt3b%2522%253A%257B%2522id%2522%253A%2522clj8lzong000d3b6oaajmbt3b%2522%252C%2522tabs%2522%253A%255B%257B%2522type%2522%253A%2522TASK_LOG%2522%252C%2522taskId%2522%253A%2522dev%2522%252C%2522id%2522%253A%2522clj8m09fv00a93b6oanu0b3hr%2522%252C%2522mode%2522%253A%2522permanent%2522%257D%252C%257B%2522type%2522%253A%2522TASK_PORT%2522%252C%2522taskId%2522%253A%2522dev%2522%252C%2522port%2522%253A3000%252C%2522id%2522%253A%2522clj8m0fol00ep3b6o64c3m2ao%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522path%2522%253A%2522%252F%2522%257D%255D%252C%2522activeTabId%2522%253A%2522clj8m0fol00ep3b6o64c3m2ao%2522%257D%257D%252C%2522showDevtools%2522%253Atrue%252C%2522showSidebar%2522%253Atrue%252C%2522sidebarPanelSize%2522%253A15%257D)
 ## Features
 
 - Next.js 13 App Directory
 - Radix UI Primitives
 - Tailwind CSS
-- Icons from [Lucide](https://lucide.dev)
+- Icons from [Lucide](https://lucide.dev) very cool! 
 - Dark mode 
 - Server side rendering
 - using react pending form! interesting stuff.
 
 ## stuff to work on in order of priority
-- [ ] pending status /loader on the is complete
-- [ ] delete
-- [ ] table
-- [ ] sorting
+- [ ] pending status /loader on the is complete - hmm can get the server to show this and experimental formstatus?
+- [ ] delete - needs to disable and switch to loading
+- [x] table 
+- [ ] sorting again server side sorting would also need pending / loader
 
